@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i&display=swap');
+
+.title__container{position: relative;
+  margin-bottom: 40px;color:#5225bd;}
+.title__container h4{font-weight:lighter;font-size:30px;   margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;display:block;}
+.left{width:50%;margin:0;font-weight:lighter;font-weight:300;}
+.right{position: absolute;
+  width: 50%;
+  height: 50px;
+  right: 0;
+  top: 50%;
+  margin-top: -23px;}
+.dotted{    height: 100%;
+  width: 100%;
+  background-image: -webkit-repeating-radial-gradient(center center, #5225bd, #5225bd 1.5px, transparent 1.5px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, #5225bd, #5225bd 1.5px, transparent 1.5px, transparent 100%);
+  background-size: 15px 15px;}

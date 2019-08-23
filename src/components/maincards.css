@@ -1,0 +1,14 @@
+.main__card{border-radius:15px;box-shadow: 0 0 10px 3px rgba(209, 213, 221, 0.5);margin-bottom:40px;width:420px;height:300px;}
+.main__card:hover{box-shadow:0 0 10px 6px rgba(178, 178, 178, 0.5);}
+.main__card--upside{height:120px;border-radius:15px 15px 0 0;margin:0;}
+.main__card--downside{text-align:left;}
+.main__card--downside {margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 34px;
+  margin-top: 25px;
+  font-size: 18px;
+  color: #6e7380;
+  font-weight: normal;}
+.main__card--upside h3{padding:25px 0 0 35px;margin:0;color:#FFF;font-size:30px;width:191px;}
+.main__card h4{text-transform: uppercase;color:#acaeb7;font-size:16px;text-align:left;
+}

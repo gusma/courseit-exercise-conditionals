@@ -1,0 +1,8 @@
+.little__card{width:250px;height:303px;display:flex;flex-direction: column;box-shadow: 0 0 10px 3px rgba(209, 213, 221, 0.5);background-color:white;border-radius:15px;}
+.image__container{height:60px;margin:35px auto 15px auto;}
+h4{font-weight:bold;color:#5225bd;font-size:18px;text-align:center;margin:0;font-weight:400;}
+.little__card p{font-size: 16px;
+  color: #6e7380;
+  text-align: center;
+  width: 170px;
+  margin: 10px auto;}
