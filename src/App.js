@@ -2,43 +2,72 @@ import React from 'react';
 import Titles from './components/titles';
 import MainCard from './components/maincards';
 import LittleCard from './components/littlecards';
-import camaraweb from './images/camara-web.png';
-import charlar from './images/charlar.png';
-import apoyar from './images/apoyar.png';
 import './App.css';
+
+const bigcards = [
+  {
+    title: "Frontend Avanzado",
+    subtitle: "Inscripciones abiertas",
+    text: "Aumenta tu nivel en Frontend aprendiendo React, Redux y NextJS",
+    bgColor: "#42b8ca"
+  },
+  {
+    title: "Desarrollo frontend",
+    subtitle: "Curso en progreso",
+    text: "Aprendé a crear sitios web desde cero con HTML, CSS, Javascript, React y Node.",
+    bgColor: "rgb(233, 96, 143)"
+  }
+];
+
+const littlecards = [
+  {
+    icon: "https://i.ibb.co/MGpD2Z2/camara-web.png",
+    title: "Reviví cada clase",
+    texto: "Todas las clases son grabadas para que puedas volver a verlas tantas veces como te sea necesario"
+  },
+  {
+    icon: "https://i.ibb.co/3fw38fY/charlar.png",
+    title: "Nunca perdés una clase",
+    texto: "Todas las clases se pueden tomar de forma presencial o remota"
+  },
+  {
+    icon: "https://i.ibb.co/bbgTr02/apoyar.png",
+    title: "Estás Acompañado",
+    texto: "Un equipo de trabajo especializado te acompaña durante toda la cursada"
+  }
+
+]
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props); 
   }
   render() {
-
-    const name = "NotBlue";
 
     return (
       <div className="App">
         <div className="first__block">
         <Titles title="Nuestros cursos y carreras" />
-        {name == "AllBlue" ? (
+       
         <div className="main__card--container">
-        <MainCard title="Frontend Avanzado" subtitle="Inscripciones abiertas" textcontent="Aumenta tu nivel en Frontend aprendiendo React, Redux y NextJS" bgColor="#42b8ca" />
-        <MainCard title="Desarrollo Frontend" subtitle="Curso en Desarrollo" textcontent="Aprende a crear sitios web desde cero con HTML, CSS, Javascript, React y Node" bgColor="#42b8ca" />
-        </div>
-        ) : (
-          <div className="main__card--container">
-          <MainCard title="Frontend Avanzado" subtitle="Inscripciones abiertas" textcontent="Aumenta tu nivel en Frontend aprendiendo React, Redux y NextJS" bgColor="#42b8ca" />
-          <MainCard title="Desarrollo Frontend" subtitle="Curso en Desarrollo" textcontent="Aprende a crear sitios web desde cero con HTML, CSS, Javascript, React y Node" bgColor="#e9608f" />
-          </div>    
-        )
-        }
+          {bigcards.map((item, i) => {
+            return(
+        <MainCard title={item.title} subtitle={item.subtitle} textcontent={item.text} bgColor={item.bgColor} />
+            );
+          })}
+         </div>
+    
         </div>
         <div className="second__block">
           <div className="container">
         <Titles title="Nuestra propuesta de valor" />
         <div className="little__card--container">
-        <LittleCard icon={camaraweb} title="Reviví cada clase" textcontent="Todas las clases son grabadas para que puedas volver a verlas tantas veces como te sea necesario" />
-        <LittleCard icon={charlar} title="Nunca perdes una clase" textcontent="Todas las clases se pueden tomar de forma presencial o remota" />
-        <LittleCard icon={apoyar} title="Estas Acompañado" textcontent="Un equipo de trabajo especializado te acompaña durante toda la cursada" />
+        {littlecards.map((item, i) => {
+            return(
+        <LittleCard key={i} icon={item.icon} title={item.title} textcontent={item.texto} />
+          );
+        })}
+    
         </div>
         </div>
         </div>
